@@ -13,9 +13,10 @@ const Home = () => {
   const [isAnswering,setIsAnswering] = useState(false)
   const mediaRecorderRef = useRef()
   const audioRef = useRef()
-  const backendApi = import.meta.env.BACKEND_API
+  const backendApi = import.meta.env.VITE_BACKEND_API
   // const [isQuestioning,setIsQuestioning] = useState(false)
   const [answerAudioURL,setAnswerAudioURL] = useState(null)
+  console.log(backendApi);
   
 
   const handleStartRecording = async ()=>{

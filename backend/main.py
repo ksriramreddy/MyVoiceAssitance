@@ -4,12 +4,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import app.convert_audio_video as cav
 from app.ask_bot import ask_bot
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 app = FastAPI()
 # app.mount("/", StaticFiles(directory="dist", html=True), name="static")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://myvoiceassitance-3.onrender.com/"],
+    allow_origins=[str(os.getenv("FRONTEND_API"))],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
