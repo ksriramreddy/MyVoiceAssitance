@@ -705,7 +705,8 @@ body {
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
+ background: #e0e0e0;
+  
   border-radius: 1px;
 }
 

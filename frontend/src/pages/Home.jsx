@@ -113,7 +113,7 @@ const Home = () => {
           <span className='text-green-600 font-extrabold '>Sriram </span>
           Voice Assistant
         </div>
-        <div className='border card rounded-sm green-shadow lg:h-[77%] h-[90%] lg:w-[77%] w-[90%] flex flex-col justify-end gap-10 items-center'>
+        <div className='border card rounded-sm green-shadow lg:h-[77%] h-[90%] lg:w-[77%] w-[90%] flex flex-col justify-end gap-10 items-center relative'>
           <button  className='lg:mb-7 sm:mb-2 '>
             {
               isRecording? <Goggel/> : isGettingAnswer? <Hole/> : 
@@ -133,7 +133,7 @@ const Home = () => {
               isRecording? <Check className='p-5 rounded-full glass w-full h-full'  onClick={handleStopRecording} /> : <Mic className='p-5 rounded-full glass w-full h-full'  onClick={handleStartRecording} />
             }
           </button>
-          <div className='scrollbar mb-2 flex w-full  overflow-x-scroll gap-3 items-center lg:justify-evenly sm:justify-start'>
+          <div className='scrollbar flex w-full  overflow-x-scroll gap-3 mb-7 items-center lg:justify-evenly sm:justify-start'>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is you experience?</h1>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Tell me about your self?</h1>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is your goal?</h1>
@@ -141,6 +141,7 @@ const Home = () => {
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>How did you done this projects?</h1>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>How did you done this projects?</h1>
           </div>
+        <div className='text-gray-400 text-sm absolute bottom-0 right-0'>Wanna build your own AI assistance? <span className='text-blue-400 '>Follow this</span></div>
         </div>
       </div>
     </div>
