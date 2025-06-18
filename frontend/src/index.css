@@ -405,8 +405,8 @@ i:nth-child(10) {
 
 /* From Uiverse.io by Shoh2008 */ 
 .loader {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   position: relative;
   box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
@@ -480,8 +480,8 @@ border: 1px solid rgba(255, 255, 255, 0.64);
 /* From Uiverse.io by jdm-encompass */ 
 .spinner {
   background-image: linear-gradient(rgb(0, 144, 255) 35%, rgb(0, 0, 255));
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   animation: spinning82341 1.7s linear infinite;
   text-align: center;
   border-radius: 50px;
@@ -537,8 +537,8 @@ border: 1px solid rgba(255, 255, 255, 0.64);
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: #FFF;
   transform: translate(-50% , -100%)  scale(0);
@@ -557,4 +557,11 @@ border: 1px solid rgba(255, 255, 255, 0.64);
   100% {
     transform: translate(-50%, -100%) scale(0)
   }
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }

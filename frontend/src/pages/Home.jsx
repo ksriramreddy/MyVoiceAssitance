@@ -13,7 +13,7 @@ const Home = () => {
   const [isAnswering,setIsAnswering] = useState(false)
   const mediaRecorderRef = useRef()
   const audioRef = useRef()
-  
+  const backendApi = import.meta.env.BACKEND_API
   // const [isQuestioning,setIsQuestioning] = useState(false)
   const [answerAudioURL,setAnswerAudioURL] = useState(null)
   
@@ -80,7 +80,7 @@ const Home = () => {
     const formData = new FormData()
     formData.append("audio",audioBlobs,"recording.wav");
 
-    const resp = await axios.post("http://localhost:8000/talk",formData,
+    const resp = await axios.post(`${backendApi}/talk`,formData,
       {
         headers : {"Content-Type" : "multipart/form-data"},
         responseType : "blob"
@@ -92,13 +92,13 @@ const Home = () => {
   }
 
   return (
-    <div className=" h-screen bg-black text-white w-screen flex items-center justify-center">
+    <div className=" h-screen bg-white text-black w-screen flex items-center justify-center">
       <div className='w-[90%] h-[90%] text-center flex flex-col items-center justify-evenly'>
         <div className='text-5xl font-italic font-semibold'>
           <span className='text-green-600 font-extrabold '>Sriram </span>
           Voice Assitance
         </div>
-        <div className='border green-shadow h-[77%] w-[77%] flex flex-col justify-evenly items-center'>
+        <div className='border card green-shadow h-[77%] w-[77%] flex flex-col justify-evenly items-center'>
           <button onClick={()=>{setIsRecording(true)}}>
             {/* {
               isRecording ? <Goggel/> : <Hole/>
