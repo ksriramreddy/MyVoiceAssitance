@@ -82,6 +82,6 @@ npm run dev #start the server
 
 **6. Facing Trouble ❌**
 
-Mail me here [🔗](k.sriramreddy9@gmail.com)
+Mail me here `k.sriramreddy9@gmail.com`
 [LinkedIn](https://www.linkedin.com/in/sriram-reddy-34905a212/)
 [Instagram](https://www.instagram.com/kothireddysriram/)
