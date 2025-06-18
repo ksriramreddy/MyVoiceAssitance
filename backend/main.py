@@ -11,7 +11,7 @@ app = FastAPI()
 # app.mount("/", StaticFiles(directory="dist", html=True), name="static")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[str(os.getenv("FRONTEND_API"))],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

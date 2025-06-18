@@ -77,6 +77,24 @@ const Home = () => {
       console.log("No audio to send");
       return
     }
+    try {
+      setIsGettingAnswer(true)
+      const formData = new FormData()
+      formData.append("audio",audioBlobs,"recording.wav");
+
+      const resp = await axios.post(`${backendApi}/talk`,formData,
+        {
+          headers : {"Content-Type" : "multipart/form-data"},
+          responseType : "blob"
+        }
+      )
+      const audioURL = URL.createObjectURL(resp.data)
+      setAnswerAudioURL(audioURL)
+      setIsGettingAnswer(false)
+    } catch (error) {
+        console.log(error.message);
+        
+    }
     setIsGettingAnswer(true)
     const formData = new FormData()
     formData.append("audio",audioBlobs,"recording.wav");
