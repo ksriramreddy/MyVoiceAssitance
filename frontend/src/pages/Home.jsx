@@ -11,12 +11,13 @@ const Home = () => {
   const [audioBlob , setAudioBlob] = useState(null)
   const [isGettingAnswer,setIsGettingAnswer] = useState(false)
   const [isAnswering,setIsAnswering] = useState(false)
+  const [askedQuestion, setAskedQuestion] = useState("")
   const mediaRecorderRef = useRef()
   const audioRef = useRef()
   const backendApi = import.meta.env.VITE_BACKEND_API
   // const [isQuestioning,setIsQuestioning] = useState(false)
   const [answerAudioURL,setAnswerAudioURL] = useState(null)
-  console.log(backendApi);
+  // console.log(backendApi);
   
 
   const handleStartRecording = async ()=>{
@@ -69,12 +70,12 @@ const Home = () => {
       mediaRecorderRef.current.stop()
       setIsRecording(false)
     }
-    
   }
 
   const handleAskQuestion = async (audioBlobs)=>{
     if(!audioBlobs){
       console.log("No audio to send");
+      alert("audio is not clear")
       return
     }
     try {
@@ -88,6 +89,10 @@ const Home = () => {
           responseType : "blob"
         }
       )
+
+      setAskedQuestion(resp.headers["asked_question"]);
+      console.log(resp);
+      
       const audioURL = URL.createObjectURL(resp.data)
       setAnswerAudioURL(audioURL)
       setIsGettingAnswer(false)
@@ -95,19 +100,7 @@ const Home = () => {
         console.log(error.message);
         
     }
-    setIsGettingAnswer(true)
-    const formData = new FormData()
-    formData.append("audio",audioBlobs,"recording.wav");
-
-    const resp = await axios.post(`${backendApi}/talk`,formData,
-      {
-        headers : {"Content-Type" : "multipart/form-data"},
-        responseType : "blob"
-      }
-    )
-    const audioURL = URL.createObjectURL(resp.data)
-    setAnswerAudioURL(audioURL)
-    setIsGettingAnswer(false)
+    
   }
 
   return (
@@ -115,10 +108,10 @@ const Home = () => {
       <div className='w-[90%] h-[90%] text-center flex flex-col items-center justify-evenly'>
         <div className='text-5xl font-italic font-semibold'>
           <span className='text-green-600 font-extrabold '>Sriram </span>
-          Voice Assitance
+          Voice Assistant
         </div>
-        <div className='border card green-shadow h-[77%] w-[77%] flex flex-col justify-evenly items-center'>
-          <button onClick={()=>{setIsRecording(true)}}>
+        <div className='border card green-shadow h-[77%] w-[77%] flex flex-col justify-end gap-10 items-center'>
+          <button  className='mb-7'>
             {/* {
               isRecording ? <Goggel/> : <Hole/>
             } */}
@@ -131,11 +124,21 @@ const Home = () => {
               
             }
           </button>
-          <button className=' '>
+          {
+            askedQuestion?
+            <h1 className='p-2 text-sm bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>{askedQuestion+"?"}</h1> : <h1 className='p-2 text-sm bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>No question yet...</h1>
+          }
+          <button className={`${!isGettingAnswer?'cursor-pointer':'cursor-not-allowed'}`} disabled={isGettingAnswer} >
             {
               isRecording? <Check className='p-5 rounded-full glass w-full h-full'  onClick={handleStopRecording} /> : <Mic className='p-5 rounded-full glass w-full h-full'  onClick={handleStartRecording} />
             }
           </button>
+          <div className='mb-2 flex w-full overflow-hidden gap-3 items-center justify-evenly'>
+            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is you experience?</h1>
+            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Tell me about your self?</h1>
+            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is your goal?</h1>
+            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Where can you see your self in next 5 years?</h1>
+          </div>
         </div>
       </div>
     </div>

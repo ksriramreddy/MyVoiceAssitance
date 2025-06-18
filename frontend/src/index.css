@@ -492,8 +492,8 @@ border: 1px solid rgba(255, 255, 255, 0.64);
 
 .spinner1 {
   background-color: rgb(0, 0, 255);
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50px;
   filter: blur(10px);
   animation: flickeringGlow 2s linear infinite;
@@ -527,37 +527,68 @@ border: 1px solid rgba(255, 255, 255, 0.64);
 /* From Uiverse.io by Shoh2008 */ 
 .load {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   position: relative;
+  background: #000;
+  background: linear-gradient(135deg, rgba(255, 0, 150, 0.6), rgba(0, 205, 255, 0.6));
+  /* border-radius: 43% 57% 70% 30% / 30% 30% 70% 70% ; */
+  animation: push_402 5s infinite   linear ;
 }
 
-.load:before , .load:after {
+/* .load:before , .load:after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  
   background: #FFF;
   transform: translate(-50% , -100%)  scale(0);
   animation: push_401 2s infinite linear;
 }
+.load::before{
+  animation: push_402 2s infinite   linear ;
+  background: #000;
+}
 
 .load:after {
   animation-delay: 1s;
-}
+} */
 
 @keyframes push_401 {
   0%, 50% {
-    transform: translate(-50%, 0%) scale(1) rotate(0deg);
+    transform: translate(-50%, 0%) scale(1) ;
+    /* border-radius: 72% 28% 40% 60% / 28% 55% 45% 72%  ; */
   }
-
   100% {
-    transform: translate(-50%, -100%) scale(0) rotate(360deg);
+    transform: translate(-50%, -100%) scale(0) ;
+    /* border-radius: 67% 33% 83% 17% / 18% 55% 45% 82% ; */
   }
 }
+@keyframes push_402 {
+  0% {
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+  }
+  20% {
+    border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+  }
+  40% {
+    border-radius: 70% 30% 50% 50% / 50% 70% 30% 50%;
+  }
+  60% {
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+  }
+  80% {
+    border-radius: 40% 60% 30% 70% / 70% 40% 60% 30%;
+  }
+  100% {
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+  }
+}
+
+
 
 
 .card {
@@ -575,4 +606,88 @@ border: 1px solid rgba(255, 255, 255, 0.64);
  background: #e0e0e0;
  box-shadow: 20px 20px 60px #bebebe,
                -20px -20px 60px #ffffff;
+}
+
+
+
+
+
+
+/* From Uiverse.io by mrhyddenn */ 
+loader-box {
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.loading-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.loading-wrapper .loaderss {
+  height: 120px;
+  width: 120px;
+  border: 3px solid #e5e5e5;
+  border-radius: 50%;
+  -webkit-animation: pulse1572 1200ms ease-in-out;
+  animation: pulse1572 1200ms ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.loading-wrapper .loaderss .loader-inner {
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(180deg, rgb(0, 140, 255) 0%, rgb(218, 67, 218) 100%);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  border-radius: 50%;
+  -webkit-animation: innerPulse934 1200ms ease-in-out;
+  animation: innerPulse934 1200ms ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+@keyframes pulse1572 {
+  0% {
+    border: 3px solid #fff;
+  }
+
+  50% {
+    border: 40px solid #fff;
+  }
+
+  100% {
+    border: 3px solid #fff;
+  }
+}
+
+@keyframes innerPulse934 {
+  0% {
+    height: 70px;
+    width: 70px;
+  }
+
+  50% {
+    height: 90.33333px;
+    width: 90.33333px;
+  }
+
+  100% {
+    height: 70px;
+    width: 70px;
+  }
 }

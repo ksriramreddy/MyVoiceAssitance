@@ -2,6 +2,7 @@ Personal Background
 Self-introduction / introduction — Hi, I’m Sriram Reddy, and I come from Peddapalli district in Telangana. Who am I? I’m someone passionate about tech and innovation. My father's name is K. Sampath Reddy, and my mother's name is Premalatha. I recently completed my B.Tech graduation from CMR Technical Campus, where I pursued Computer Science with a specialization in Data Science. This summary of my background is a quick self-introduction and gives you a basic idea about myself.
 
  Internship Experience
+ My experience is
 This part of my introduction covers my professional training. I recently completed an internship at Dataspeaks, where I worked as a Full Stack Developer. During this time, I handled frontend and backend work using ReactJS, Node.js, SpringJS, and MongoDB. This experience helped shape who I am as a developer. It was not just about coding — it was a learning journey that forms a key part of my self-introduction. If you're looking for a summary about myself, this internship reflects my learning and real-world exposure.
 
  Projects and Technical Skills
@@ -14,3 +15,7 @@ To make this self-introduction complete, I’ll talk a little about my personal 
 Let me finish this introduction with my strengths and a bit of honesty about where I can improve. I learn fast, adapt quickly, and I enjoy solving problems. I take pride in being open to any new tech stack. One of my weaknesses is procrastination — I’m working on that every day. This self-introduction wouldn’t be complete without saying that I’m constantly growing. If you’re wondering who I am, I’m someone who stays motivated, learns quickly, and wants to keep improving. That’s a quick summary about myself and how I look at my personal and professional development.
 
 If you want to contact me, feel free to reach out. You can email me at k.sriramreddy9@gmail.com or call me directly at +91 6303471489. This is my preferred contact information. Whether you're reaching out for job opportunities, project collaborations, or mentorship, I’m always open to connecting. You can also ask: how to contact Sriram, what's your email, or what’s your phone number, and I’ll provide this.
+
+What are you doing now or currently
+
+Currently, I’m actively working on building my career in the fields of Machine Learning, AI Engineering, and Software Engineering. I’ve been dedicating my time to gaining deeper knowledge in areas such as LLMs, RAG pipelines, vector databases, and full-stack web development using the MERN stack. I’m also exploring practical applications by building end-to-end projects that integrate AI models with real-world problems. At this stage, I’m looking for job opportunities where I can contribute, learn from experienced teams, and grow professionally in any of these domains."

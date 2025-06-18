@@ -2,10 +2,17 @@ import React from 'react';
 
 const Goggle = () => {
   return (
-<div class="spinner">
-  <div class="spinner1"></div>
-  <div class="circle"></div>
-</div>
+    <div className='relative'>
+
+    
+<div class="loader-box">
+    <div class="loading-wrapper">
+        <div class="loaderss">
+            <div class="loader-inner">
+            </div>
+        </div>
+    </div>
+</div></div>
 
 
   );

@@ -15,8 +15,8 @@ faiss_index = faiss.IndexFlatL2(1536)
 docs =[]
 embeddings =  []
 
-for file in os.listdir("data"):
-    file_path = os.path.join("data",file)
+for file in os.listdir("backend/data"):
+    file_path = os.path.join("backend/data",file)
     text = ""
     if file.endswith(".pdf"):
         reader = PdfReader(file_path)
@@ -36,7 +36,7 @@ for file in os.listdir("data"):
         )
         embeddings.append(resp.data[0].embedding)
 faiss_index.add(np.array(embeddings).astype("float32"))
-faiss.write_index(faiss_index,"vector_database/faiss.index")
+faiss.write_index(faiss_index,"backend/vector_database/faiss.index")
 
-with open("vector_database/docs.pkl", "wb") as f:
+with open("backend/vector_database/docs.pkl", "wb") as f:
     pickle.dump(docs, f)

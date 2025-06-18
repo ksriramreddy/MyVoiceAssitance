@@ -15,6 +15,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["asked_question"],
 )
 
 @app.post("/talk")
@@ -27,4 +28,5 @@ async def ask_question(audio : UploadFile = File(...)):
     print("got ans")
     output_audio = cav.to_audio(resp)
     print("converted to audio")
-    return FileResponse(output_audio,media_type="audio/wav")
+    headers = {"asked_question": question}
+    return FileResponse(output_audio,media_type="audio/wav", headers=headers)

@@ -32,6 +32,11 @@ def ask_bot(question):
     the replay should more like human.
     if the Context inopproprite to question just reply with:
     "I Dont have awareness to that question right now"
+    Rules : 
+    1. always use I am, me , mine in the place Sriram Reddy , like your talking in behalf of me
+    2. never use based on the context provided
+    3. responce politly and respectfully like adding greetings and thank you
+    4. The generated answer should fell like human emotions
     Context : {answer}
     question : {question}
     """
