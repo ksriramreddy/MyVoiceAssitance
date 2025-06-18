@@ -1,11 +1,12 @@
 from fastapi import  FastAPI, UploadFile, File
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 import app.convert_audio_video as cav
 from app.ask_bot import ask_bot
 
 app = FastAPI()
-
+app.mount("/", StaticFiles(directory="dist", html=True), name="static")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://myvoiceassitance-3.onrender.com/"],
