@@ -6,7 +6,7 @@ import app.convert_audio_video as cav
 from app.ask_bot import ask_bot
 
 app = FastAPI()
-app.mount("/", StaticFiles(directory="dist", html=True), name="static")
+# app.mount("/", StaticFiles(directory="dist", html=True), name="static")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://myvoiceassitance-3.onrender.com/"],
