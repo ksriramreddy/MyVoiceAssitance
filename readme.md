@@ -25,10 +25,14 @@ This is a voice-based assistant powered by **OpenAI**, **FAISS vector database**
 ## 📂 Folder Structure
 
 ```bash
+
+#This are the file you need to update in order to make your OWN AI ASSISTANT
+
 MyVoiceAssistant/
 │
 ├── frontend/                # React client
 │   └── src/pages/Home.jsx   # Main voice assistant UI
+│   └──.env                  # You backend deployed server link or localhost:8000/
 │
 ├── backend/
 │   ├── app/
