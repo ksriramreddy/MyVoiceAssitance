@@ -111,10 +111,7 @@ const Home = () => {
           Voice Assistant
         </div>
         <div className='border card green-shadow h-[77%] w-[77%] flex flex-col justify-end gap-10 items-center'>
-          <button  className='mb-7'>
-            {/* {
-              isRecording ? <Goggel/> : <Hole/>
-            } */}
+          <button  className='lg:mb-7 sm:mb-2 '>
             {
               isRecording? <Goggel/> : isGettingAnswer? <Hole/> : 
               answerAudioURL? 
@@ -133,11 +130,11 @@ const Home = () => {
               isRecording? <Check className='p-5 rounded-full glass w-full h-full'  onClick={handleStopRecording} /> : <Mic className='p-5 rounded-full glass w-full h-full'  onClick={handleStartRecording} />
             }
           </button>
-          <div className='mb-2 flex w-full overflow-hidden gap-3 items-center justify-evenly'>
-            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is you experience?</h1>
-            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Tell me about your self?</h1>
-            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is your goal?</h1>
-            <h1 className='p-3 bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Where can you see your self in next 5 years?</h1>
+          <div className='mb-2 flex w-full lg:overflow-hidden  sm:overflow-x-scroll gap-3 items-center lg:justify-evenly sm:justify-start'>
+            <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is you experience?</h1>
+            <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Tell me about your self?</h1>
+            <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is your goal?</h1>
+            <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Where can you see your self in next 5 years?</h1>
           </div>
         </div>
       </div>

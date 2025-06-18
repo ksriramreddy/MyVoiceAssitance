@@ -3,6 +3,7 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import app.convert_audio_video as cav
+import unicodedata
 from app.ask_bot import ask_bot
 import os
 from dotenv import load_dotenv
@@ -28,5 +29,6 @@ async def ask_question(audio : UploadFile = File(...)):
     print("got ans")
     output_audio = cav.to_audio(resp)
     print("converted to audio")
+    question = unicodedata.normalize("NFKD", question  ).encode("ascii", "ignore").decode("ascii")
     headers = {"asked_question": question}
     return FileResponse(output_audio,media_type="audio/wav", headers=headers)
