@@ -100,6 +100,7 @@ const Home = () => {
         console.log(error.message);
         setAnswerAudioURL(null)
         setIsAnswering(false)
+        setIsGettingAnswer(false)
         setAskedQuestion("Unable to process. Please come again")
     }
     
