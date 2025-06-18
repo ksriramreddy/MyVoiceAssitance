@@ -98,7 +98,9 @@ const Home = () => {
       setIsGettingAnswer(false)
     } catch (error) {
         console.log(error.message);
-        
+        setAnswerAudioURL(null)
+        setIsAnswering(false)
+        setAskedQuestion("Unable to process. Please come again")
     }
     
   }
