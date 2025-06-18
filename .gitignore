@@ -9,6 +9,7 @@ __pycache__/
 .env.*
 *.DS_Store
 *.db
+*backe
 
 # Virtual environments
 venv/
@@ -23,8 +24,8 @@ pdfenv/
 *.cache/
 
 # FAISS indexes (if saved to disk)
-*.index
-*.faiss
+# *.index
+# *.faiss
 
 # React/Vite (Node.js)
 node_modules/
