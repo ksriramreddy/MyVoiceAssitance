@@ -602,7 +602,7 @@ border: 1px solid rgba(255, 255, 255, 0.64);
 .card {
  /* width: 190px;
  height: 254px; */
- border-radius: 50px;
+ /* border-radius: 50px; */
  background: #e0e0e0;
  box-shadow: 20px 20px 60px #bebebe,
                -20px -20px 60px #ffffff;
@@ -689,5 +689,37 @@ loader-box {
   100% {
     height: 70px;
     width: 70px;
+  }
+}
+
+
+
+body {
+  --sb-track-color: #e6eff3;
+  --sb-thumb-color: #6BAF8D;
+  --sb-size: 3px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: var(--sb-size)
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  /* background: var(--sb-thumb-color); */
+  background: linear-gradient(to right, rgb(0, 140, 255), rgb(218, 67, 218));
+
+  border-radius: 1px;
+  /* border: 2px solid #d21414; */
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
   }
 }

@@ -107,13 +107,13 @@ const Home = () => {
   }
 
   return (
-    <div className=" h-screen bg-white text-black w-screen flex items-center justify-center">
-      <div className='w-[90%] h-[90%] text-center flex flex-col items-center justify-evenly'>
-        <div className='text-5xl font-italic font-semibold'>
+    <div className=" bg-white h-screen text-black w-screen flex items-center justify-center">
+      <div className='w-[90%] h-[100%] text-center flex flex-col items-center justify-evenly'>
+        <div className='lg:text-5xl text-3xl font-italic font-semibold'>
           <span className='text-green-600 font-extrabold '>Sriram </span>
           Voice Assistant
         </div>
-        <div className='border card green-shadow h-[77%] w-[77%] flex flex-col justify-end gap-10 items-center'>
+        <div className='border card rounded-sm green-shadow lg:h-[77%] h-[90%] lg:w-[77%] w-[90%] flex flex-col justify-end gap-10 items-center'>
           <button  className='lg:mb-7 sm:mb-2 '>
             {
               isRecording? <Goggel/> : isGettingAnswer? <Hole/> : 
@@ -133,11 +133,13 @@ const Home = () => {
               isRecording? <Check className='p-5 rounded-full glass w-full h-full'  onClick={handleStopRecording} /> : <Mic className='p-5 rounded-full glass w-full h-full'  onClick={handleStartRecording} />
             }
           </button>
-          <div className='mb-2 flex w-full lg:overflow-hidden  sm:overflow-x-scroll gap-3 items-center lg:justify-evenly sm:justify-start'>
+          <div className='scrollbar mb-2 flex w-full  overflow-x-scroll gap-3 items-center lg:justify-evenly sm:justify-start'>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is you experience?</h1>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Tell me about your self?</h1>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>What is your goal?</h1>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>Where can you see your self in next 5 years?</h1>
+            <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>How did you done this projects?</h1>
+            <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>How did you done this projects?</h1>
           </div>
         </div>
       </div>
