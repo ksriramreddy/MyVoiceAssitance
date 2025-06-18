@@ -1,0 +1,10 @@
+faiss-cpu
+openai
+sentence-transformers
+PyPDF2
+python-dotenv
+uvicorn
+fastapi
+python-multipart
+gtts
+whisper 

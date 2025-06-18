@@ -1,0 +1,45 @@
+import pickle
+import os 
+import faiss
+import openai
+import numpy as np
+from dotenv import load_dotenv
+
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+faiss_index = faiss.read_index("vector_database/faiss.index")
+
+with open("vector_database/docs.pkl","rb") as f:
+    docs = pickle.load(f)
+
+def ask_bot(question):
+    resp = openai.embeddings.create(
+        model="text-embedding-3-small",
+        input=question
+    )
+    embeddings = resp.data[0].embedding
+    question_embd = np.array([embeddings]).astype("float32")
+    print(question_embd)
+    _, idx  = faiss_index.search(question_embd , k = 4)
+
+    answer = "\n\n".join([docs[i] for i in idx[0]])
+
+    prompt = f"""
+    You are a voice assitance who knows averythig about Sriram,
+    Use this following Context and answer the given question.
+    the replay should more like human.
+    if the Context inopproprite to question just reply with:
+    "I Dont have awareness to that question right now"
+    Context : {answer}
+    question : {question}
+    """
+    resp = openai.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role":"user","content":prompt}],
+        temperature=0.2
+    )
+    print(resp)
+    # print(resp.choices[0]["message"]["content"])
+    return resp.choices[0].message.content

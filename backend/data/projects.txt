@@ -1,0 +1,46 @@
+the list of projects that i have done are LLM-Powered Document QA Assistant, MERN Chat Application with AI Assistant (ECHO-AI),  Full Stack Instagram Clone Personal Portfolio Website 
+
+### LLM-Powered Document QA Assistant 
+pdf Reader
+I built an LLM-powered Document Question Answering Assistant that allows users to upload PDF or text files and ask questions about them. This system uses FastAPI on the backend along with Hugging Face Transformers for LLM inference. Semantic embeddings are generated using sentence-transformers and stored using FAISS (Facebook AI Similarity Search) for fast vector-based retrieval. The system answers user questions by finding the most relevant document chunks and generating an LLM-based response. I also developed a minimal ReactJS frontend to allow users to upload files and ask questions interactively—without needing login or authentication.for completing this i have used these tech stacks Python, FastAPI, Hugging Face Transformers, Sentence Transformers, FAISS, ReactJS, LLM, Vector DB  
+ document assistant, PDF QA, RAG system, vector database, semantic search, huggingface, react qa frontend , pdf reader
+
+ problem that i have faced during LLM-Powered Document QA Assistant is When I started working on this project, it was my first time building a complete Retrieval-Augmented Generation (RAG) system, which integrates both semantic search and LLM-based responses. The entire stack — from document ingestion to vector indexing — was completely new to me.
+
+One of the biggest hurdles was understanding how semantic embeddings work, and how to choose between tools like FAISS, ChromaDB, and LangChain. I struggled to understand how to chunk documents, embed them properly, and load them into a vector database. I was also new to the Hugging Face and FastAPI ecosystem, so installing and using these packages gave me version conflicts and Python dependency issues.
+
+To overcome all these, I referred to Hugging Face and LangChain documentation extensively. I used ChatGPT to debug my issues and understand the high-level flow of how RAG works. I also explored tutorials and resources from DeepSeek and Medium to get practical examples. Through this process, I gained confidence in LLM pipelines, embedding models, and vector database indexing.
+
+---
+
+### MERN Chat Application with AI Assistant (ECHO-AI)
+ECHO-AI is a full-stack real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js). The system includes secure user login via JWT, real-time chat features via Socket.IO, and image sharing using Cloudinary. A unique feature of this application is the integration of Google’s Gemini API to create an in-chat AI assistant called ECHO-AI, allowing users to have AI conversations similar to Meta AI in WhatsApp. This showcases my ability to combine full-stack engineering with real-time communication and third-party AI integration.for completing this i have used these tech stacks ReactJS, Node.js, Express.js, MongoDB, JWT, Socket.IO, Cloudinary, Google Gemini API  
+**Keywords:** MERN chat app, real-time messaging, ECHO-AI, Google Gemini, WhatsApp AI clone, socket chat
+
+problem that i have face during MERN Chat Application with AI Assistant (ECHO-AI) the The most difficult part of this project was implementing real-time chat features using Socket.IO. Before this, I had no prior experience with WebSocket communication or real-time frontend/backend sync.
+
+problem that i have face during MERN Chat Application with AI Assistant (ECHO-AI) I encountered many bugs while managing socket events — such as handling user connections, managing private chats, and synchronizing messages across multiple clients. I wasn’t sure how to create and listen to events correctly, especially when working with both frontend (React) and backend (Node.js + Express). There were times when messages wouldn't update in real time or certain sockets wouldn't register events.
+
+problem that i have face during MERN Chat Application with AI Assistant (ECHO-AI) To solve this, I used ChatGPT to understand basic Socket.IO patterns. I also referred to official Socket.IO documentation and watched multiple YouTube tutorials that explained its flow visually. Through trial and error, I learned how to architect a clean event-driven communication pattern and handle errors gracefully.
+
+---
+
+### Full Stack Instagram Clone
+I developed a full-featured Instagram clone focusing on UI/UX and backend functionality. On the frontend, I used ReactJS and Chakra UI to build a responsive interface. On the backend, Firebase Authentication was used for user login and Firebase Realtime Database for handling posts, likes, and comments. The app includes features like following/unfollowing users, liking and commenting on posts, and viewing real-time updates.for completing this i have used these tech stacks ReactJS, Firebase Auth, Firebase Realtime DB, Chakra UI, TailwindCSS, Redux  
+**Keywords:** Instagram clone, firebase backend, react frontend, post interaction, social media clone, scalable app
+problem that i have face during Full Stack Instagram Clone
+This was my first large-scale full-stack project. The major challenge I faced was using Firebase as the backend service. I had never worked with Firebase Authentication or the Firebase Realtime Database before.
+
+problem that i have face during Full Stack Instagram Clone I didn’t understand how to structure data in NoSQL, how to perform real-time sync across users, or even how authentication works under the hood. I faced issues like incorrect state updates, unauthorized access bugs, and problems managing likes, comments, and following features in real-time.
+
+problem that i have face during Full Stack Instagram Clone To fix these issues, I spent a lot of time on Firebase documentation and experimented with its authentication and security rules. I watched tutorial series that implemented Instagram clones, which helped me learn best practices. I also used ChatGPT to debug specific errors and understand concepts like Firestore listeners and dynamic rendering.
+
+By the end, I became confident in using Firebase for real-time apps and learned how to integrate it smoothly with React frontend.
+
+---
+
+Personal Portfolio Website
+I built my own portfolio to highlight my full-stack development skills. It features a clean UI, project showcases, and responsive design. It’s hosted online and demonstrates both frontend and backend integration skills, deployment readiness, and my ability to present technical work professionally.for completing this i have used these tech stacks ReactJS, HTML, CSS, JavaScript, Responsive Web Design  
+**Keywords:** personal portfolio, full-stack portfolio, frontend showcase, developer website, project presentation
+
+

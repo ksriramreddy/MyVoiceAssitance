@@ -1,0 +1,560 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* From Uiverse.io by terenceodonoghue */ 
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
+  animation: rotate_3922 1.2s linear infinite;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+.container span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+.container span:nth-of-type(3) {
+  filter: blur(25px);
+}
+
+.container span:nth-of-type(4) {
+  filter: blur(50px);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  border: solid 5px #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* From Uiverse.io by elijahgummer */ 
+.hole {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 140px;
+  opacity: 0;
+  animation-name: scale;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+i:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+i:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+i:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+i:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+i:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+i:nth-child(6) {
+  animation-delay: 1.8s;
+}
+
+i:nth-child(7) {
+  animation-delay: 2.1s;
+}
+
+i:nth-child(8) {
+  animation-delay: 2.4s;
+}
+
+i:nth-child(9) {
+  animation-delay: 2.7s;
+}
+
+i:nth-child(10) {
+  animation-delay: 3s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(2);
+    opacity: 1;
+    box-shadow: 0px 0px 50px rgba(113, 105, 105, 1);
+  }
+  50% {
+    transform: scale(1) translate(0px, -5px);
+    opacity: 1;
+    box-shadow: 0px 8px 20px rgba(20, 19, 19, 1);
+  }
+  100% {
+    transform: scale(0.1) translate(0px, 5px);
+    opacity: 1;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 1);
+  }
+}
+
+
+/* From Uiverse.io by Nawsome */ 
+.pl {
+  width: 6em;
+  height: 6em;
+}
+
+.pl__ring {
+  animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+  stroke: #f42f25;
+}
+
+.pl__ring--b {
+  animation-name: ringB;
+  stroke: #f49725;
+}
+
+.pl__ring--c {
+  animation-name: ringC;
+  stroke: #255ff4;
+}
+
+.pl__ring--d {
+  animation-name: ringD;
+  stroke: #f42582;
+}
+
+/* Animations */
+@keyframes ringA {
+  from, 4% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+
+  12% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -335;
+  }
+
+  32% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -595;
+  }
+
+  40%, 54% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -660;
+  }
+
+  62% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -665;
+  }
+
+  82% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -925;
+  }
+
+  90%, to {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -990;
+  }
+}
+
+@keyframes ringB {
+  from, 12% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -110;
+  }
+
+  20% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -115;
+  }
+
+  40% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -195;
+  }
+
+  48%, 62% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  70% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  90% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -305;
+  }
+
+  98%, to {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+}
+
+@keyframes ringC {
+  from {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  8% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  28% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  36%, 58% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  66% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  86% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  94%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+
+@keyframes ringD {
+  from, 8% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  16% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  36% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  44%, 50% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  58% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  78% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  86%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}/* From Uiverse.io by satyamchaudharydev */ 
+.loading {
+ --speed-of-animation: 0.9s;
+ --gap: 6px;
+ --first-color: #4c86f9;
+ --second-color: #49a84c;
+ --third-color: #f6bb02;
+ --fourth-color: #f6bb02;
+ --fifth-color: #2196f3;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100px;
+ gap: 6px;
+ height: 100px;
+}
+
+.loading span {
+ width: 4px;
+ height: 50px;
+ background: var(--first-color);
+ animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading span:nth-child(2) {
+ background: var(--second-color);
+ animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+ background: var(--third-color);
+ animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+ background: var(--fourth-color);
+ animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+ background: var(--fifth-color);
+ animation-delay: -0.5s;
+}
+
+@keyframes scale {
+ 0%, 40%, 100% {
+  transform: scaleY(0.05);
+ }
+
+ 20% {
+  transform: scaleY(1);
+ }
+}
+
+/* From Uiverse.io by Shoh2008 */ 
+.loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
+      0 5px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.loader:before,
+  .loader:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 45%;
+  top: -40%;
+  background-color: #2e2e2e;
+  animation: wave 5s linear infinite;
+}
+
+.loader:before {
+  border-radius: 30%;
+  background: rgba(122, 122, 122, 0.4);
+  animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* From Uiverse.io by aadium */ 
+.loaders {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 20px 40px #ff4646, 0px -20px 40px #8949ff, 20px 0px 40px#ff07fb, -20px 0px 40px #ff07fb;
+  border-radius: 10em;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.green-shadow {
+  box-shadow: 4px 4px 0px 3px rgba(21, 255, 0, 0.8);
+}
+
+.glass{
+  /* From https://css.glass */
+background: rgba(172, 172, 172, 0.48);
+box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.64);
+}
+
+
+/* From Uiverse.io by jdm-encompass */ 
+.spinner {
+  background-image: linear-gradient(rgb(0, 144, 255) 35%, rgb(0, 0, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(0, 144, 255), 0px 5px 20px 0px rgb(0, 0, 255);
+  position: relative;
+}
+
+.spinner1 {
+  background-color: rgb(0, 0, 255);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+  animation: flickeringGlow 2s linear infinite;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flickeringGlow {
+  0% {
+    box-shadow: 0px -10px 40px 0px rgb(0, 144, 255), 0px 10px 40px 0px rgb(0, 0, 255), 0px 0px 20px 0px white;
+  }
+  
+  /* ...rest of the keyframes remain the same... */
+}
+
+/* From Uiverse.io by Shoh2008 */ 
+.load {
+  display: block;
+  width: 84px;
+  height: 84px;
+  position: relative;
+}
+
+.load:before , .load:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #FFF;
+  transform: translate(-50% , -100%)  scale(0);
+  animation: push_401 2s infinite linear;
+}
+
+.load:after {
+  animation-delay: 1s;
+}
+
+@keyframes push_401 {
+  0% , 50% {
+    transform: translate(-50% , 0%)  scale(1)
+  }
+
+  100% {
+    transform: translate(-50%, -100%) scale(0)
+  }
+}

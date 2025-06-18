@@ -1,0 +1,30 @@
+✅ 1. Tell me about a time you faced a major challenge. How did you overcome it?
+Answer:
+During my LLM-powered PDF QA Assistant project, I struggled with integrating multiple tools — FAISS, Hugging Face, and FastAPI. I had no previous experience with vector search or semantic embedding. Initially, I was overwhelmed and stuck for days, unsure how to link components. Instead of giving up, I broke the problem down into smaller chunks, researched each one separately, and relied on official documentation and tools like ChatGPT to test code snippets. That challenge taught me that persistence and the ability to self-learn are key to solving new problems in tech.
+
+How do you handle feedback, especially if it's critical?
+I believe feedback is essential for growth. During my internship, I once submitted a UI component that didn't meet accessibility standards. My mentor pointed it out and suggested improvements. Instead of taking it personally, I took it as an opportunity to learn more about UI/UX best practices. I reworked the component, and the improved version was praised for its responsiveness and clarity. That experience helped me understand that feedback sharpens your craft — it’s not criticism, it’s guidance.
+
+Describe a time you worked in a team. What was your role, and how did you contribute?
+Answer:
+In my internship at Dataspeaks, I worked on a frontend module alongside 2 other developers. My role was to build responsive, component-based UI with Chakra UI and React. I collaborated closely with the backend team to ensure API integration was seamless. I also helped debug a complex state management issue using Redux Toolkit. I made sure to keep communication open via Slack and regularly demo my work. The teamwork taught me how essential it is to be both technically strong and cooperative to meet deadlines.
+
+✅ 4. What’s your biggest strength or superpower?
+Answer:
+Adaptability. I pick up new technologies very quickly. For example, I had zero experience with Firebase before starting my Instagram clone. But within a few days of learning through documentation and YouTube tutorials, I implemented real-time post updates and Firebase Auth. I thrive in environments where I get to learn and solve real-world problems by adapting to new tools.
+
+✅ 5. What’s your biggest weakness?
+Answer:
+Procrastination used to be a major weakness. I’d overthink and delay starting large tasks. To fix this, I began breaking big tasks into small, achievable goals with strict self-imposed deadlines. I use tools like Notion to plan and track progress. That habit improved my productivity and project delivery.
+
+✅ 6. How do you stay motivated when you're working on something challenging?
+Answer:
+I remind myself why I started — I genuinely enjoy solving problems and building things. I also try to visualize the outcome: seeing a working feature or an AI assistant answering queries motivates me. When stuck, I take short breaks, ask for advice, or switch to another part of the task. That change in pace usually helps me come back stronger.
+
+✅ 7. Where do you see yourself in 3 years?
+Answer:I see myself as a strong contributor in a tech team, building real-world products that help people — either as a full-stack engineer or in AI-focused development. I’d love to mentor juniors, take ownership of core features, and deepen my understanding of scalable architecture and AI-driven systems.
+
+What is your goal?
+My main goal is to become a Machine Learning Model Developer who builds solutions that address real-world problems. I’m deeply passionate about leveraging data and AI to solve challenges — whether they are related to software systems, automation, user personalization, or process optimization.
+my goal is
+I want to contribute to building intelligent systems that are both impactful and scalable. Whether it's developing NLP models, implementing recommendation engines, or optimizing deep learning pipelines, my goal is to stay at the forefront of emerging technologies and continuously evolve as an AI engineer who builds practical, real-time applications using ML and LLMs.
