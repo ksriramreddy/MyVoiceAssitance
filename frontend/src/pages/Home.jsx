@@ -141,7 +141,7 @@ const Home = () => {
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>How did you done this projects?</h1>
             <h1 className='p-3 min-w-fit bg-slate-300 glass text-gray-500 border border-slate-200 rounded-xl'>How did you done this projects?</h1>
           </div>
-        <div className='text-gray-400 text-sm absolute bottom-0 right-0'>Wanna build your own AI assistance? <span className='text-blue-400 '>Follow this</span></div>
+        <div className='text-gray-400 text-sm absolute bottom-0 right-0'>Wanna build your own AI Assistant? <span className='text-blue-400 '><a href="https://github.com/ksriramreddy/MyVoiceAssitance/tree/master?tab=readme-ov-file#%EF%B8%8F-sriram-voice-assistant---rag-based-voice-bot-with-pdfinfo-retrieval">Follow this</a></span></div>
         </div>
       </div>
     </div>
