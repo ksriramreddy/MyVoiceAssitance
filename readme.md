@@ -36,7 +36,6 @@ MyVoiceAssistant/
 │
 ├── backend/
 │   ├── app/
-│   │   ├── main.py          # FastAPI main server
 │   │   ├── ask_bot.py       # RAG + LLM logic
 │   │   ├── audio_utils.py   # Audio handling (TTS/STT)
 │   │   └── vectordb.py      # Embedding + FAISS index builder
@@ -44,6 +43,7 @@ MyVoiceAssistant/
 │   │   ├── faiss.index      # FAISS index file
 │   │   └── docs.pkl         # Chunked documents for search
 │   ├── data/                # Place your PDF or text files here
+│   ├── main.py              # FastAPI main server
 │   └── .env                 # Add your OpenAI API key here
 ```
 
