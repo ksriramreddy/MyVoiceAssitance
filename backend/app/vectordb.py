@@ -28,7 +28,7 @@ for file in os.listdir("backend/data"):
     for i in range(0 , len(text) , 450):
         chunks.append(text[i:i+500])
     docs.extend(chunks)
-
+    
     for chunk in chunks:
         resp = openai.embeddings.create(
             model="text-embedding-3-small",

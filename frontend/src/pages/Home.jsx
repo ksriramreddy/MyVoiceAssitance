@@ -109,9 +109,9 @@ const Home = () => {
   return (
     <div className=" bg-white h-screen text-black w-screen flex items-center justify-center">
       <div className='w-[90%] h-[100%] text-center flex flex-col items-center justify-evenly'>
-        <div className='lg:text-5xl text-3xl font-italic font-semibold'>
-          <span className='text-green-600 font-extrabold '>Sriram </span>
-          Voice Assistant
+        <div className='fontstyle lg:text-6xl text-3xl font-italic font-semibold'>
+          <span className='text-green-500 font-extrabold '>Sriram </span>
+          Voice Assistant.
         </div>
         <div className='border card rounded-sm green-shadow lg:h-[77%] h-[90%] lg:w-[77%] w-[90%] flex flex-col justify-end gap-10 items-center relative'>
           <button  className='lg:mb-7 sm:mb-2 '>
