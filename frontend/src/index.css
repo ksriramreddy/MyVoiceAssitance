@@ -418,6 +418,7 @@ i:nth-child(10) {
   box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.5) inset,
       0 5px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  animation: wave1 1s linear infinite;
 }
 
 .loader:before,
@@ -438,13 +439,16 @@ i:nth-child(10) {
   animation: wave 5s linear infinite;
 }
 
+
 @keyframes wave {
   0% {
     transform: rotate(0);
+    /* width: 100% ; */
   }
 
   100% {
     transform: rotate(360deg);
+    /* width: 120%; */
   }
 }
 
@@ -455,16 +459,28 @@ i:nth-child(10) {
   box-shadow: 0px 20px 40px #ff4646, 0px -20px 40px #8949ff, 20px 0px 40px#ff07fb, -20px 0px 40px #ff07fb;
   border-radius: 10em;
   position: relative;
-  animation: rotate 1s linear infinite;
+  animation: rotate 2s  linear infinite;
+  /* animation: wave1 1s linear infinite; */
+}
+@keyframes wave1 {
+  0% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(0.6);
+  }
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: rotate(0deg) scale(1);
   }
+  
 
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotate(360deg) scale(1);
+
   }
 }
 
