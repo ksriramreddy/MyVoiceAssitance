@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//Evalgator//Evalgator//EN
+VERSION:2.0
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20250619T113000Z
+DTSTAMP:20250619T102116Z
+DTEND:20250619T130000Z
+UID:369245e9-d823-4d52-a506-b8b99a4eb454
+DESCRIPTION:You are invited to attend the assessment on Evalgator as per this schedule. You can try out our trial assessment anytime before the test to get a feel of the platform.
+X-ALT-DESC;FMTTYPE=text/html:You are invited to attend the assessment on Evalgator as per this schedule. You can try out our trial assessment anytime before the test to get a feel of the platform.
+SUMMARY:SurveySparrow Invitation : SurveySparrow - SI S4 - Backend Test 
+ORGANIZER;CN="SurveySparrow":MAILTO:support@evalgator.com
+ATTENDEE;CN="Sriram Reddy Sriram Reddy";RSVP=TRUE:mailto:k.sriramreddy9@gmail.com
+BEGIN:VALARM
+TRIGGER:-PT15M
+REPEAT:1
+DURATION:PT15M
+ACTION:DISPLAY
+DESCRIPTION:SurveySparrow Invitation : SurveySparrow - SI S4 - Backend Test 
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -21,12 +21,14 @@ app.add_middleware(
 
 @app.post("/talk")
 async def ask_question(audio : UploadFile = File(...)):
-    with open("question_audio.wav","wb") as f:
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",audio)
+    with open("question_audio1.wav","wb") as f:
         f.write(await audio.read())
 
     question = cav.to_text()
+    print("converted to text")
     resp = ask_bot(question)
-    print("got ans")
+    print("got ans") 
     output_audio = cav.to_audio(resp)
     print("converted to audio")
     question = unicodedata.normalize("NFKD", question  ).encode("ascii", "ignore").decode("ascii")
